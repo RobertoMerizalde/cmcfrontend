@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="{{theme}}" data-sidebar-behaviour="{{sidebarBehaviour}}" data-navigation-color="{{navigationColor}}" data-is-fluid="{{isFluid}}">
+    <head>
+        {{> layouts/head title="Schedule"}}
+    </head>
+    
+    <body>
+        
+        <!-- NAVIGATION -->
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <!-- HEADER -->
+
+            <div class="container-fluid">
+
+                <!-- Title -->
+                <h1 class="h2">
+                    Schedule
+                </h1>
+
+
+                <div class="row">
+                    <div class="col">
+
+                        <!-- Card -->
+                        <div class="card border-0 flex-fill w-100" data-list='{"valueNames": ["supplier", "shipping-number", "time", "geographic", {"name": "date", "attr": "data-signed"}, "status"], "page": 8}' id="users">
+                            <div class="card-header border-0 card-header-space-between">
+
+                                <!-- Title -->
+                                <h2 class="card-header-title h4 text-uppercase">
+                                    Outbound
+                                </h2>
+
+                            </div>
+
+                            <!-- Table -->
+                            <div class="table-responsive">
+                                <table id="shipmentTable" class="table align-middle table-edge table-hover table-nowrap mb-0">
+                                    <thead class="thead-light">
+                                        <tr>
+
+                                            <th>
+                                                <a href="javascript: void(0);" class="text-muted list-sort" data-sort="supplier">
+                                                    Supplier
+                                                </a>
+                                            </th>
+                                            <th>
+                                                <a href="javascript: void(0);" class="text-muted list-sort" data-sort="shipping-number">
+                                                    Shipping Number
+                                                </a>
+                                            </th>
+                                            <th>
+                                                <a href="javascript: void(0);" class="text-muted list-sort" data-sort="date">
+                                                    Pick up
+                                                </a>
+                                            </th>
+                                            <th>
+                                                <a href="javascript: void(0);" class="text-muted list-sort" data-sort="time">
+                                                    Time
+                                                </a>
+                                            </th>
+                                            <th>
+                                                <a href="javascript: void(0);" class="text-muted list-sort" data-sort="geographic">
+                                                    Geographic
+                                                </a>
+                                            </th>
+                                            <th class="w-150px min-w-150px">
+                                                <a href="javascript: void(0);" class="text-muted list-sort" data-sort="status">
+                                                    Status
+                                                </a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="list">
+
+                                        <!-- Rows will be dynamically added here -->
+
+                                    </tbody>
+                                </table>
+                            </div> <!-- / .table-responsive -->
+
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="me-5 text-secondary small">
+                                        Showing: <span class="list-pagination-page-first"></span> - <span class="list-pagination-page-last"></span> of <span class="list-pagination-pages"></span>
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <ul class="pagination list-pagination mb-0"></ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div> <!-- / .row -->
+
+
+
+                
+            </div> <!-- / .container-fluid -->
+
+            <!-- Footer-->
+            {{> layouts/footer}}
+            
+        </main> <!-- / main -->
+
+        {{> modals/shipment-modal}}
+
+        <!-- JAVASCRIPT-->
+        {{> scripts/scripts}}
+    </body>
+</html>

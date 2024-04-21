@@ -1,0 +1,8 @@
+{
+    "demoMode": false,
+    "theme": "light",
+    "sidebarBehaviour": "fixed",
+    "navigationColor": "inverted",
+    "isRTL": false,
+    "isFluid": true
+}
